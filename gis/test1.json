@@ -1,0 +1,132 @@
+[
+    {
+        "DISPLAY_ORDER": "1",
+        "PROJECT_TYPE": "工作阶段",
+        "FILTER": null,
+        "LAYER_ID": null,
+        "PID": "0",
+        "ID": "1",
+        "URL": null,
+        "NAME": null
+    },
+    {
+        "DISPLAY_ORDER": "1",
+        "PROJECT_TYPE": "计划类型",
+        "FILTER": "经营性项目",
+        "LAYER_ID": 3,
+        "PID": "2",
+        "ID": "7",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "经营性项目"
+    },
+    {
+        "DISPLAY_ORDER": "1",
+        "PROJECT_TYPE": "项目类型",
+        "FILTER": "堆场类项目",
+        "LAYER_ID": 5,
+        "PID": "3",
+        "ID": "9",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "堆场类项目"
+    },
+    {
+        "DISPLAY_ORDER": "1",
+        "PROJECT_TYPE": "工作阶段",
+        "FILTER": "前期",
+        "LAYER_ID": 1,
+        "PID": "1",
+        "ID": "4",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "前期项目"
+    },
+    {
+        "DISPLAY_ORDER": "2",
+        "PROJECT_TYPE": "工作阶段",
+        "FILTER": "新开工",
+        "LAYER_ID": 1,
+        "PID": "1",
+        "ID": "5",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "新开工项目"
+    },
+    {
+        "DISPLAY_ORDER": "2",
+        "PROJECT_TYPE": "计划类型",
+        "FILTER": "非经营性项目",
+        "LAYER_ID": 3,
+        "PID": "2",
+        "ID": "8",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "非经营性项目"
+    },
+    {
+        "DISPLAY_ORDER": "2",
+        "PROJECT_TYPE": "计划类型",
+        "FILTER": null,
+        "LAYER_ID": null,
+        "PID": "0",
+        "ID": "2",
+        "URL": null,
+        "NAME": null
+    },
+    {
+        "DISPLAY_ORDER": "2",
+        "PROJECT_TYPE": "项目类型",
+        "FILTER": "码头类项目",
+        "LAYER_ID": 5,
+        "PID": "3",
+        "ID": "10",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "码头类项目"
+    },
+    {
+        "DISPLAY_ORDER": "3",
+        "PROJECT_TYPE": "工作阶段",
+        "FILTER": "续建",
+        "LAYER_ID": 1,
+        "PID": "1",
+        "ID": "6",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "续建项目"
+    },
+    {
+        "DISPLAY_ORDER": "3",
+        "PROJECT_TYPE": "项目类型",
+        "FILTER": null,
+        "LAYER_ID": null,
+        "PID": "0",
+        "ID": "3",
+        "URL": null,
+        "NAME": null
+    },
+    {
+        "DISPLAY_ORDER": "3",
+        "PROJECT_TYPE": "项目类型",
+        "FILTER": "房地产及其他经营性项目",
+        "LAYER_ID": 5,
+        "PID": "3",
+        "ID": "11",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "房地产及其他经营性项目"
+    },
+    {
+        "DISPLAY_ORDER": "4",
+        "PROJECT_TYPE": "项目类型",
+        "FILTER": "配套服务设施项目",
+        "LAYER_ID": 5,
+        "PID": "3",
+        "ID": "12",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "配套服务设施项目"
+    },
+    {
+        "DISPLAY_ORDER": "5",
+        "PROJECT_TYPE": "项目类型",
+        "FILTER": "市政基础设施项目",
+        "LAYER_ID": 5,
+        "PID": "3",
+        "ID": "13",
+        "URL": "http://10.128.141.191:6080/arcgis/rest/services/JSXM/JSXM/MapServer",
+        "NAME": "市政基础设施项目"
+    }
+]

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>地图信息</title>
+
+    <!-- Load bootstrap.css and flat-ui.css -->
+    <link rel="stylesheet" href="./quote/flat-ui/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./quote/flat-ui/css/flat-ui.css">
+
+    <!-- lets load Leaflet's  .css -->
+    <link rel="stylesheet" href="./quote/leaflet/dist/leaflet.css"/>
+
+    <!-- load leaflet marker highlight css-->
+    <link rel="stylesheet" href="./quote/leaflet.marker.highlight/dist/leaflet.marker.highlight.css">
+
+    <!-- load font awesome css -->
+    <link rel="stylesheet" href="./quote/font-awesome/css/font-awesome.min.css">
+
+    <!-- Load zTree.v3 .css -->
+    <!--<link rel="stylesheet" href="./node_modules/zTree_v3/css/zTreeStyle/zTreeStyle.css">-->
+    <link rel="stylesheet" href="./css/ztreeFontAwesome.css">
+
+    <!--&lt;!&ndash; load perfect datetimepicker css&ndash;&gt;-->
+    <!--<link rel="stylesheet" href="./quote/perfect-DateTimePicker/dist/jquery.datetimepicker.min.css">-->
+
+    <!-- Load custom css-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="./quote/flat-ui/js/html5shiv.js"></script>
+    <script src="./quote/Respond.js/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- 地图容器 -->
+<div id="map"></div>
+
+<!-- 左侧侧边框 -->
+<div id="id_content_menu" class="menu-content-absolute">
+    <!-- 左侧侧边框右侧露出的半圆形按钮，用来展开和收起左侧侧边框的 -->
+    <span id="id_btn_menu_toggle" class="fui-arrow-right span-menu-hide"></span>
+    <!-- 主要为了兼容和保险起见，在绝对定位的元素外面包裹一层相对定位 -->
+    <div class="menu-content-relative">
+        <!-- 左边侧边栏标题按钮列表 -->
+        <ul class="list-unstyled menu-content-ul">
+            <!-- data-content-id 属性对应下面的真实内容的id，当点击该按钮时，展示对应id的div -->
+            <li class="menu-content-li menu-content-li-clicked" data-content-id="id_content_tuceng">
+                    <span class="text-verticle-mode-a">
+                        图<br>
+                        层<br>
+                        控<br>
+                        制
+                    </span>
+            </li>
+            <li class="menu-content-li padding-top-five-px" data-content-id="id_content_search_list">
+                    <span class="text-verticle-mode-a ">
+                        搜<br>
+                        索<br>
+                        结<br>
+                        果
+                    </span>
+            </li>
+        </ul>
+        <div class="content-real-box">
+            <!-- 图层控制的真实面板 -->
+            <div class="content-real-div" style="display: block" id="id_content_tuceng">
+                <ul id="id_ztree_tuceng" class="ztree"></ul>
+            </div>
+            <!-- GPS定位的真实面板 -->
+            <div class="content-real-div" id="id_content_search_list">
+                <ul id="id_ul_search_list" class="ul-search-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 右侧属性弹出框，当 点击 图层控制 中地图上 点线面 地理要素时 弹出 -->
+<div id="id_attr_popup" class="attr-popup-absolute">
+    <div class="attr-popup-relative">
+        <div class="attr-popup-ul">
+            <!-- data-attr-id 对应下面表格面板的id -->
+            <span class="attr-popup-li attr-popup-li-clicked" data-attr-id="id_attr_main">
+                    主要属性
+            </span>
+        </div>
+        <div class="attr-real-box">
+            <!-- 主要属性的内容面板，以表格形式显示 -->
+            <div class="attr-real-div" id="id_attr_main" style="display: block;">
+                <table id="id_table_attr_main" class="table table-striped table-hover table-attr">
+
+                </table>
+            </div>
+
+        </div>
+        <!-- 左侧隐藏该弹出框的按钮 -->
+        <span id="id_btn_attr_toggle" class="fui-arrow-right span-attr-hide"></span>
+
+    </div>
+
+    <div class="sheshi-search">
+        <div class="input-group">
+            <input class="form-control" id="id_input_search_sheshi" type="search" placeholder="搜索项目名称" style="height: 35px;border-color: #1abc9c;">
+            <span class="input-group-btn span-search-sheshi">
+                <button type="button" id="id_btn_search_sheshi" class="btn btn-primary" style="height: 35px;line-height: 1;">
+                    <span class="fui-search"></span>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <!-- 底图切换的按钮 -->
+    <button id="id_util_btn_2d" class="btn btn-primary btn-sm" style="height: 35px;">二维底图</button>
+    <button id="id_util_btn_yx" class="btn btn-primary btn-sm" style="height: 35px;">影像底图</button>
+
+</div>
+
+<!-- lets load Leaflet's .js -->
+<script src="./quote/leaflet/dist/leaflet-src.js"></script>
+<!-- Load Esri Leaflet .  it has no .css stylesheet of its own, only .js -->
+<script src="./quote/esri-leaflet/dist/esri-leaflet-debug.js"></script>
+
+<!-- Include Proj4JS via rawgit.com in production you'd be better off hosting these libraries yourself -->
+<script src="./quote/proj4/dist/proj4-src.js"></script>
+<script src="./quote/proj4leaflet/src/proj4leaflet.js"></script>
+
+<!-- Include leaflet shape markers js -->
+<script src="./quote/leaflet-shape-markers/dist/leaflet-shape-markers.js"></script>
+
+<!-- Load jQuery.js and bootstrap.js and flat-ui related js -->
+<script src="./quote/flat-ui/js/jquery-1.10.2.min.js"></script>
+<script src="./quote/flat-ui/js/bootstrap.min.js"></script>
+<script src="./quote/flat-ui/js/flatui-checkbox.js"></script>
+<script src="./quote/flat-ui/js/flatui-radio.js"></script>
+
+<!-- Load zTree related js -->
+<script src="./quote/zTree_v3/js/jquery.ztree.core.js"></script>
+<script src="./quote/zTree_v3/js/jquery.ztree.excheck.js"></script>
+
+<!-- load leaflet markercluster js -->
+<link rel="stylesheet" href="./css/MarkerCluster.css"/>
+<link rel="stylesheet" href="./css/MarkerCluster.Default.css"/>
+<script src="./js/leaflet.markercluster-src.js"></script>
+
+<!-- load leaflet awesome marker js-->
+<link rel="stylesheet" href="./quote/leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
+<script src="./quote/leaflet.awesome-markers/dist/leaflet.awesome-markers.js"></script>
+
+<!-- load leaflet marker highlight js -->
+<script src="./quote/leaflet.marker.highlight/dist/leaflet.marker.highlight.js"></script>
+
+<script src="./js/leaflet-image.js"></script>
+<script src="./js/gisMap.js"></script>
+
+</body>
+</html>

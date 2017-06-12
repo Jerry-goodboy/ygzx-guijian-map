@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "leaflet.awesome-markers",
+        "scope": null,
+        "escapedName": "leaflet.awesome-markers",
+        "name": "leaflet.awesome-markers",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/lcd/ygzx/WEB_PROJECT/Grid_Management_II/src/main/webapp/map"
+    ]
+  ],
+  "_cnpm_publish_time": 1485199818568,
+  "_from": "leaflet.awesome-markers@latest",
+  "_hasShrinkwrap": false,
+  "_id": "leaflet.awesome-markers@2.0.4",
+  "_inCache": true,
+  "_location": "/leaflet.awesome-markers",
+  "_nodeVersion": "4.4.7",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/leaflet.awesome-markers-2.0.4.tgz_1485199818235_0.03621986578218639"
+  },
+  "_npmUser": {
+    "name": "george-silva",
+    "email": "george@sigmageosistemas.com.br"
+  },
+  "_npmVersion": "4.0.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "leaflet.awesome-markers",
+    "scope": null,
+    "escapedName": "leaflet.awesome-markers",
+    "name": "leaflet.awesome-markers",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://r.cnpmjs.org/leaflet.awesome-markers/download/leaflet.awesome-markers-2.0.4.tgz",
+  "_shasum": "66fea2090c9c8a0ab6d1f3b6bdd02fb37cf4ba1a",
+  "_shrinkwrap": null,
+  "_spec": "leaflet.awesome-markers",
+  "_where": "/Users/lcd/ygzx/WEB_PROJECT/Grid_Management_II/src/main/webapp/map",
+  "author": {
+    "name": "Lennard Voogdt and Sigma Geosistemas"
+  },
+  "bugs": {
+    "url": "https://github.com/sigma-geosistemas/Leaflet.awesome-markers/issues"
+  },
+  "dependencies": {},
+  "description": "Leaflet Awesome Markers. allows you to display custom icons easily using Leaflet",
+  "devDependencies": {},
+  "directories": {
+    "example": "examples"
+  },
+  "dist": {
+    "shasum": "66fea2090c9c8a0ab6d1f3b6bdd02fb37cf4ba1a",
+    "size": 835345,
+    "noattachment": false,
+    "tarball": "https://r.cnpmjs.org/leaflet.awesome-markers/download/leaflet.awesome-markers-2.0.4.tgz"
+  },
+  "gitHead": "0b18f6983ec7c2981061454a6ca6b29a11d97efe",
+  "homepage": "https://github.com/sigma-geosistemas/Leaflet.awesome-markers#readme",
+  "keywords": [
+    "leaflet",
+    "map",
+    "icons"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "george-silva",
+      "email": "george@sigmageosistemas.com.br"
+    }
+  ],
+  "name": "leaflet.awesome-markers",
+  "optionalDependencies": {},
+  "publish_time": 1485199818568,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigma-geosistemas/Leaflet.awesome-markers.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.4"
+}

@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+        "spec": "git+https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:Jerry-goodboy/leaflet.marker.highlight.git",
+          "sshUrl": "git+ssh://git@github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+          "httpsUrl": "git+https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+          "gitUrl": "git://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+          "shortcut": "github:Jerry-goodboy/leaflet.marker.highlight",
+          "directUrl": "https://raw.githubusercontent.com/Jerry-goodboy/leaflet.marker.highlight/master/package.json"
+        }
+      },
+      "/Users/lcd/ygzx/WEB_PROJECT/Grid_Management_II/src/main/webapp/map"
+    ]
+  ],
+  "_from": "git+https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+  "_id": "leaflet.marker.highlight@0.0.3",
+  "_inCache": true,
+  "_location": "/leaflet.marker.highlight",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+    "spec": "git+https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:Jerry-goodboy/leaflet.marker.highlight.git",
+      "sshUrl": "git+ssh://git@github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+      "httpsUrl": "git+https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+      "gitUrl": "git://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+      "shortcut": "github:Jerry-goodboy/leaflet.marker.highlight",
+      "directUrl": "https://raw.githubusercontent.com/Jerry-goodboy/leaflet.marker.highlight/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/Jerry-goodboy/leaflet.marker.highlight.git#19bfae14a579756a1c82fc56c3a200e1c91f05c4",
+  "_shasum": "0ed2cdbb8a990076eac9d54fe7b1407b18227889",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/Jerry-goodboy/leaflet.marker.highlight.git",
+  "_where": "/Users/lcd/ygzx/WEB_PROJECT/Grid_Management_II/src/main/webapp/map",
+  "author": {
+    "name": "brandonxiang"
+  },
+  "bugs": {
+    "url": "https://github.com/brandonxiang/leaflet.marker.hightlight/issues"
+  },
+  "dependencies": {},
+  "description": "Highlight performance for L.marker",
+  "devDependencies": {},
+  "gitHead": "19bfae14a579756a1c82fc56c3a200e1c91f05c4",
+  "homepage": "https://github.com/brandonxiang/leaflet.marker.hightlight#readme",
+  "keywords": [
+    "leaflet",
+    "highlight",
+    "marker"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "leaflet.marker.highlight",
+  "optionalDependencies": {},
+  "readme": "# leaflet.marker.highlight\nHighlight effects for L.marker.\n\n## Demo\n\n[DEMO](https://brandonxiang.github.io/leaflet.marker.highlight/examples/)\n\n\n## Installation\n\n```\nnpm install leaflet.marker.highlight --save\n```\n\n## Usage\n\n### Temporarily Highlight\n\nHighlight effects will occur in the situation that you put your mouse over the marker.\n\nYou can set it when initializing a marker. \n\n```\nvar marker1 = L.marker([51.5, -0.09], {highlight: 'temporary'}).addTo(map);\n```\n\nOr you can use a method to enable the highlight effects.\n\n```\nmarker1.enableTemporaryHighlight();\n```\n\n```\nmarker1.disableTemporaryHighlight();\n```\n\n\n### Permanently Highlight\n\nHighlight effects are always on.\n\n```\nvar marker1 = L.marker([51.5, -0.09], {highlight: 'permanent'}).addTo(map);\n```\n\nor\n\n```\nmarker1.enablePermanentHighlight();\n```\n\nCancel the marker highlight effects by \n\n```\nmarker1.disablePermanentHighlight();\n```\n\n## License\n\n[MIT](LICENSE)\n\n\n## Chinese Version\n\n[README](README_CN.md)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonxiang/leaflet.marker.hightlight.git"
+  },
+  "scripts": {
+    "build": "npm run build-js && npm run build-css && npm run compress-js && npm run compress-css",
+    "build-css": "cat  index.css > ./dist/leaflet.marker.highlight-src.css",
+    "build-js": "cat  index.js > ./dist/leaflet.marker.highlight-src.js",
+    "compress-css": "uglifycss ./dist/leaflet.marker.highlight-src.css > ./dist/leaflet.marker.highlight.css",
+    "compress-js": "uglifyjs ./dist/leaflet.marker.highlight-src.js -o ./dist/leaflet.marker.highlight.js -m",
+    "dev": "browser-sync start --server --files \"**/*.html,**/*.css,**/*.js\"",
+    "release": "git push origin master && git checkout gh-pages && git merge master && git push origin gh-pages && git checkout master && npm publish"
+  },
+  "version": "0.0.3"
+}
